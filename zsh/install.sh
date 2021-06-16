@@ -8,10 +8,6 @@ bash install-OhMyZsh.sh
 #PowerLevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-echo "Cambiar el tema en ~/.zsh 
-ZSH_THEME="powerlevel10k/powerlevel10k""
+mv .zshrc ~/.zshrc 
 
 echo "Instalar las fuentes dando click y configurarla en la terminal, sea gnome-terminal u otra"
-
-echo "Reiniciar la consola y configurar el tema con 'p10k configure'"
-
