@@ -1,3 +1,6 @@
 [submodule ".otras-configuraciones/.otras-configuraciones/configs"]
 	path = .otras-configuraciones/.otras-configuraciones/configs
 	url = https://github.com/nschurmann/configs
+[submodule ".otras-configuraciones/nschurmann"]
+	path = .otras-configuraciones/nschurmann
+	url = https://github.com/nschurmann/configs
