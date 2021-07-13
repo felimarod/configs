@@ -21,9 +21,9 @@ set showcmd " Show commands
 set ruler " Current cursor position 
 "set showmatch
 
-so /home/felipe/.config/nvim/plugins.vim
-so /home/felipe/.config/nvim/plugin-config.vim
-so /home/felipe/.config/nvim/maps.vim
+so $HOME/.config/nvim/plugins.vim
+so $HOME/.config/nvim/plugin-config.vim
+so $HOME/.config/nvim/maps.vim
 
 " Themes
 syntax on

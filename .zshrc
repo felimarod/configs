@@ -4,6 +4,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export DOTFILES="$HOME/.dotfiles"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -87,11 +88,12 @@ export GIT_EDITOR=nvim
 # For a full list of active aliases, run `alias`.
 
 # Atajos
-alias czsh="nvim ~/.zshrc"
-alias cnvim="nvim ~/.config/nvim"
-alias csxhkd="nvim ~/.config/sxhkd"
-alias cbspwm="nvim /home/felipe/.config/bspwm"
-alias cpoly="nvim /home/felipe/.config/polybar"
+alias c="nvim $HOME/.dotfiles"
+alias czsh="nvim $DOTFILES/.zshrc"
+alias cnvim="nvim $DOTFILES/nvim"
+alias csxhkd="nvim $DOTFILES/sxhkd"
+alias cbspwm="nvim $DOTFILES/bspwm"
+alias cpoly="nvim $DOTFILES/polybar"
 
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
