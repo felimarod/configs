@@ -3,7 +3,7 @@
 # Author: felimarod
 
 dotdirs=("bspwm" "sxhkd" "picom" "polybar")
-dir="${HOME}/.dotfiles"
+dir="${HOME}/.dotfiles/bspwm"
 
 #Colours
 greenColour="\e[0;32m\033[1m"
@@ -53,14 +53,16 @@ function dependencies(){
 }
 
 function createLinks(){
-	echo "hola"
+  for dotdir in "${dotdirs[@]}";do
+		ln -sf -d "${dir}/${dotdir}" "${HOME}/.config/${dotdir}"
+	done
 }
 
 # Main Function
 
-if [ "$(id -u)" == "0" ]; then
+#if [ "$(id -u)" == "0" ]; then
   dependencies
-  #createLinks
-else
-  echo -e "\n${redColour}[*] No soy root${endColour}\n"
-fi
+	createLinks
+#else
+  #echo -e "\n${redColour}[*] No soy root${endColour}\n"
+#fi
