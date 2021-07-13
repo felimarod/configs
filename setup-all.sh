@@ -2,8 +2,7 @@
 
 # Author: felimarod
 
-dotdirs=("bspwm" "sxhkd" "picom" "polybar")
-dir="${HOME}/.dotfiles/bspwm"
+dir="${HOME}/.dotfiles"
 
 #Colours
 greenColour="\e[0;32m\033[1m"
@@ -52,17 +51,30 @@ function dependencies(){
 	fi
 }
 
-function createLinks(){
+function createLinksDirs(){
+	dotdirs=("bspwm" "sxhkd" "picom" "polybar")
+
   for dotdir in "${dotdirs[@]}";do
 		ln -sf -d "${dir}/${dotdir}" "${HOME}/.config/${dotdir}"
 	done
+
+	ln -sf -d "${dir}/nvim" "${HOME}/.config/nvim"
+}
+
+function createLinksFiles(){
+	dotfiles=(".zshrc" ".gitconfig")
+	for dotfile in "${dotfiles[@]}";do
+ 		ln -sf "${dir}/${dotfile}" "${HOME}"
+	done
+
 }
 
 # Main Function
 
 #if [ "$(id -u)" == "0" ]; then
   dependencies
-	createLinks
+	createLinksDirs
+	createLinksFiles
 #else
   #echo -e "\n${redColour}[*] No soy root${endColour}\n"
 #fi
