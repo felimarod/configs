@@ -55,7 +55,7 @@ function createLinksDirs(){
 	dotdirs=("bspwm" "sxhkd" "picom" "polybar")
 
   for dotdir in "${dotdirs[@]}";do
-		ln -sf -d "${dir}/${dotdir}" "${HOME}/.config/${dotdir}"
+		ln -sf -d "${dir}/.bspwm/${dotdir}" "${HOME}/.config/${dotdir}"
 	done
 
 	ln -sf -d "${dir}/nvim" "${HOME}/.config/nvim"
