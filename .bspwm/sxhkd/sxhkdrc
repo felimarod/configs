@@ -1,6 +1,8 @@
 #
 # wm independent hotkeys
 #
+XF86Audio{Lower,Raise}Volume
+	mpc -q {prev,next}
 #apps
 super + shift +{f}
 	exec {firefox}
@@ -8,6 +10,8 @@ super + shift +{f}
 super + shift + g
   google-chrome
 
+super + shift + w
+	firejail firefox https://web.whatsapp.com
 # terminal 
 super + Return
 	gnome-terminal
@@ -17,14 +21,15 @@ super + @space
 	albert show 
 
 super + comma
-	rofi -show run
+	rofi -show drun
+  #rofi -modi run,drun,window -show drun -show-icons -sidebar-mode 
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
 super + shift + s
-	gnome-screenshot
+	gnome-screenshot -i
 
 #
 # bspwm hotkeys

@@ -88,12 +88,10 @@ export GIT_EDITOR=nvim
 # For a full list of active aliases, run `alias`.
 
 # Atajos
-alias c="nvim $HOME/.dotfiles"
-alias czsh="nvim $DOTFILES/.zshrc"
-alias cnvim="nvim $DOTFILES/nvim"
-alias csxhkd="nvim $DOTFILES/sxhkd"
-alias cbspwm="nvim $DOTFILES/bspwm"
-alias cpoly="nvim $DOTFILES/polybar"
+alias c="nvim $DOTFILES"
+alias czs="nvim $DOTFILES/.zshrc"
+alias cnv="nvim $DOTFILES/nvim"
+alias cwm="nvim $DOTFILES/.bspwm"
 
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'

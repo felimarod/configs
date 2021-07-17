@@ -4,3 +4,6 @@
 [submodule ".otras-configuraciones/nschurmann"]
 	path = .otras-configuraciones/nschurmann
 	url = https://github.com/nschurmann/configs
+[submodule ".otras-configuraciones/neovim-config"]
+	path = .otras-configuraciones/neovim-config
+	url = https://github.com/JAlejandroMarin/neovim-config.git

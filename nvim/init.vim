@@ -9,7 +9,7 @@ set smartindent " indent like the last line
 
 " Cursorline and a column
 set cursorline
-set colorcolumn=120
+set colorcolumn=80
 highlight ColoColumn ctermbg=0 guibg=lightgrey
 
 " Nubers

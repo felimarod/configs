@@ -5,8 +5,9 @@ nnoremap <Leader>q :q<CR>
 inoremap <silent>ii <Esc>
 
 " execute code
-nmap <Leader>rp :!python3 %<CR>
 nmap <Leader>rj :!javac  *.java ; java Launcher<CR>
+nmap <Leader>rp :!python3 %<CR>
+nmap <Leader>bp :!black %<CR>
 
 " faster move
 nnoremap <C-j> 10<C-e>
