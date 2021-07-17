@@ -4,15 +4,15 @@ set clipboard=unnamedplus
 
 " Tabs
 set sw=4 " tabs in # spaces
-set expandtab
-set smartindent " indent like the last line
+"set expandtab
+set smartindent " Indent like the last line
 
 " Cursorline and a column
 set cursorline
 set colorcolumn=80
 highlight ColoColumn ctermbg=0 guibg=lightgrey
 
-" Nubers
+" Numbers
 set number
 set relativenumber
 set numberwidth=1

@@ -7,7 +7,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.config/vimplugs')
 
 " Language
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 Plug 'scrooloose/nerdcommenter'
 
 " Completion
