@@ -89,9 +89,41 @@ export GIT_EDITOR=nvim
 # For a full list of active aliases, run `alias`.
 
 # Atajos
-alias c="nvim $DOTFILES"
-alias czs="nvim $DOTFILES/.zshrc"
-alias cnv="nvim $DOTFILES/nvim"
+alias q=exit
+alias c=openConfig
+function openConfig {
+    if [ $# -eq 0 ]; then
+	nvim $DOTFILES
+    else
+	case $1 in
+	    v)
+		nvim $DOTFILES/nvim
+		;;
+	    z)
+		nvim $DOTFILES/.zshrc
+		;;
+	    wmd)
+		nvim $DOTFILES/.bspwm
+		;;
+	    bsp)
+		nvim $DOTFILES/.bspwm/bspwm/bspwmrc
+		;;
+	    sxh)
+		nvim $DOTFILES/.bspwm/sxhkd/sxhkdrc
+		;;
+	    *)
+		echo Ingrese un argumento valido
+		echo "\t"v\) open nvim directory, you can also use vc
+		echo "\t"z\) open ZSH config file, you can also use zshc
+		echo "\t"wmd\) open bspwm directory, you can also use cwm
+		echo "\t"bsp\) open bspwm config file
+		echo "\t"sxh\) open sxhkd config file
+		;;
+	esac
+    fi
+}
+alias zshc="nvim $DOTFILES/.zshrc"
+alias vc="nvim $DOTFILES/nvim"
 alias cwm="nvim $DOTFILES/.bspwm"
 
 alias ll='lsd -lh --group-dirs=first'
@@ -111,15 +143,20 @@ function openNvim {
 }
 
 function py {
-  if [ $# -eq 0 ]; then
-    python3 
-  else
-    if [ $# -eq 2 ]; then
-      python3 $1 $2
-    else
-      python3 $1
-    fi
-  fi
+  case $# in
+      0)
+	  python3
+	  ;;
+      1)
+	  python3 $1
+	  ;;
+      2)
+	  python3 $1 $2
+	  ;;
+      *)
+	  echo 'Use the large command python3'
+	  ;;
+  esac
 }
 # Set 'man' colors
 function man() {
@@ -134,14 +171,14 @@ function man() {
     man "$@"
 }
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # Change cursor shape for different vi modes.
-function zle-keymap-select {
-  if [[ $KEYMAP == vicmd ]] || [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-  elif [[ $KEYMAP == main ]] || [[ $KEYMAP == viins ]] || [[ $KEYMAP = '' ]] || [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-  fi
-}
-zle -N zle-keymap-select
+#function zle-keymap-select {
+  #if [[ $KEYMAP == vicmd ]] || [[ $1 = 'block' ]]; then
+    #echo -ne '\e[1 q'
+  #elif [[ $KEYMAP == main ]] || [[ $KEYMAP == viins ]] || [[ $KEYMAP = '' ]] || [[ $1 = 'beam' ]]; then
+    #echo -ne '\e[5 q'
+  #fi
+#}
+#zle -N zle-keymap-select
