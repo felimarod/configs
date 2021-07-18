@@ -19,20 +19,24 @@ Plug 'lilydjwg/colorizer'
 
 " Integrations
 Plug 'scrooloose/nerdtree'
-"Plug 'christoomey/vim-tmux-navigator'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'christoomey/vim-tmux-navigator'
 "Plug 'benmills/vimux' " tmux
+" git
+Plug 'tpope/vim-fugitive'
 
 " Interface
 Plug 'joshdick/onedark.vim' 
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'PhilRunninger/nerdtree-buffer-ops'
+Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'itchyny/lightline.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'junegunn/fzf.vim'
 
 " Commands
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'easymotion/vim-easymotion'
 Plug 'terryma/vim-multiple-cursors'
-
-" git
 
 call plug#end()

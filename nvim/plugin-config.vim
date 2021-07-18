@@ -1,3 +1,6 @@
+" Auto-pairs
+let g:AutoPairsFlyMode = 0
+
 " nerdtree
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
@@ -6,11 +9,11 @@ let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
+let NERDTreeNaturalSort=1
 
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
-"let g:NERDTreeDirArrowExpandable = ''
-"let g:NERDTreeDirArrowCollapsible = ''
+
 
 " Comands personals
 command! -bang -nargs=? -complete=dir GFiles
@@ -36,13 +39,13 @@ set cmdheight=1
 set updatetime=300
 
 " don't give |ins-completion-menu| messages.
-set shortmess+=c
+"set shortmess+=c
 
 " always show signcolumns
-set signcolumn=yes
+"set signcolumn=yes
 
 " fugitive always vertical diffing
-set diffopt+=vertical
+"set diffopt+=vertical
 
-let $FZF_DEFAULT_OPTS='--layout=reverse'
+"let $FZF_DEFAULT_OPTS='--layout=reverse'
 

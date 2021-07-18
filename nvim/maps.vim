@@ -15,8 +15,8 @@ nnoremap <C-k> 10<C-y>
 nmap <Leader>s <Plug>(easymotion-s2)
 
 " split resize
-nnoremap <Leader>> 10<C-w>>
-nnoremap <Leader>< 10<C-w><
+nnoremap <Leader>+ 10<C-w>>
+nnoremap <Leader>- 10<C-w><
 
 " quick semi
 nnoremap <Leader>; $a;<Esc>
@@ -77,7 +77,7 @@ function! OpenTerminal()
     execute "q"
   else
     " open terminal
-    execute "vsp term://zsh"
+    execute "sp term://zsh"
 
     " turn off numbers
     execute "set nonu"
