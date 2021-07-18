@@ -14,6 +14,8 @@ let NERDTreeNaturalSort=1
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
+" tmux
+let g:tmux_navigator_no_mappings = 1
 
 " Comands personals
 command! -bang -nargs=? -complete=dir GFiles
@@ -42,10 +44,10 @@ set updatetime=300
 "set shortmess+=c
 
 " always show signcolumns
-"set signcolumn=yes
+set signcolumn=yes
 
 " fugitive always vertical diffing
 "set diffopt+=vertical
 
-"let $FZF_DEFAULT_OPTS='--layout=reverse'
+let $FZF_DEFAULT_OPTS='--layout=reverse'
 

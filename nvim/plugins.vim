@@ -22,6 +22,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'christoomey/vim-tmux-navigator'
 "Plug 'benmills/vimux' " tmux
+Plug 'editorconfig/editorconfig-vim'
 " git
 Plug 'tpope/vim-fugitive'
 

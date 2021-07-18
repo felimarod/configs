@@ -4,15 +4,17 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 inoremap <silent>ii <Esc>
 
+" faster move
+nmap <Leader>s <Plug>(easymotion-s2)
+" Problems with tmux plug, put: 
+" let g:tmux_navigaro_no_mappings = 1
+nnoremap <c-j> 10<c-e>
+nnoremap <c-k> 10<c-y>
+
 " execute code
 nmap <Leader>rj :!javac  *.java ; java Launcher<CR>
 nmap <Leader>rp :!python3 %<CR>
 nmap <Leader>bp :!black %<CR>
-
-" faster move
-nnoremap <C-j> 10<C-e>
-nnoremap <C-k> 10<C-y>
-nmap <Leader>s <Plug>(easymotion-s2)
 
 " split resize
 nnoremap <Leader>+ 10<C-w>>
@@ -48,7 +50,6 @@ nmap <silent> gr <Plug>(coc-references)
 " diagnostics
 nmap <silent> gb :CocDiagnostics<CR>
 
-
 " tabs navigation
 map <Leader>h :tabprevious<cr>
 map <Leader>l :tabnext<cr>
@@ -77,7 +78,7 @@ function! OpenTerminal()
     execute "q"
   else
     " open terminal
-    execute "sp term://zsh"
+    execute "vsp term://zsh"
 
     " turn off numbers
     execute "set nonu"
