@@ -44,7 +44,7 @@ set updatetime=300
 "set shortmess+=c
 
 " always show signcolumns
-set signcolumn=yes
+"set signcolumn=yes
 
 " fugitive always vertical diffing
 "set diffopt+=vertical

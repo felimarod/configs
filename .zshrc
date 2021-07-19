@@ -138,7 +138,26 @@ function openNvim {
   if [ $# -eq 0 ]; then
     nvim ./
   else
-    nvim $1
+    case $1 in
+	c)
+	    nvim $DOTFILES/nvim
+	    ;;
+	z)
+	    nvim $DOTFILES/.zshrc
+	    ;;
+	wmd)
+	    nvim $DOTFILES/.bspwm
+	    ;;
+	bsp)
+	    nvim $DOTFILES/.bspwm/bspwm/bspwmrc
+	    ;;
+	sxh)
+	    nvim $DOTFILES/.bspwm/sxhkd/sxhkdrc
+	    ;;
+	*)
+	    nvim $1
+	    ;;
+    esac
   fi
 }
 
