@@ -2,6 +2,10 @@ set encoding=utf-8
 set mouse=a  
 set clipboard=unnamedplus
 
+" Save changes 
+set undodir=~/.undodir/
+set undofile
+
 " Tabs
 set sw=4 " tabs in # spaces
 "set expandtab
@@ -29,7 +33,6 @@ so $HOME/.config/nvim/maps.vim
 syntax on
 set termguicolors
 colorscheme onedark
-let g:airline_theme='onedark'
 
 "" Searching
 set hlsearch    " highlight matches

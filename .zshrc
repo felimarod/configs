@@ -3,7 +3,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export vc="$HOME/.config/nvim"
 export DOTFILES="$HOME/.dotfiles"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -97,19 +97,22 @@ function openConfig {
     else
 	case $1 in
 	    v)
-		nvim $DOTFILES/nvim
+		nvim $HOME/.config/nvim
 		;;
 	    z)
-		nvim $DOTFILES/.zshrc
+		nvim $HOME/.zshrc
 		;;
-	    wmd)
+	    de)
 		nvim $DOTFILES/.bspwm
 		;;
 	    bsp)
-		nvim $DOTFILES/.bspwm/bspwm/bspwmrc
+		nvim $HOME/.config/bspwm/bspwmrc
 		;;
 	    sxh)
-		nvim $DOTFILES/.bspwm/sxhkd/sxhkdrc
+		nvim $HOME/.config/sxhkd/sxhkdrc
+		;;
+	    pb)
+		nvim $HOME/.config/polybar
 		;;
 	    *)
 		echo Ingrese un argumento valido
@@ -122,8 +125,8 @@ function openConfig {
 	esac
     fi
 }
-alias zshc="nvim $DOTFILES/.zshrc"
-alias vc="nvim $DOTFILES/nvim"
+alias zshc="nvim $HOME/.zshrc"
+alias vc="nvim $HOME/.config/nvim"
 alias cwm="nvim $DOTFILES/.bspwm"
 
 alias ll='lsd -lh --group-dirs=first'
@@ -140,19 +143,19 @@ function openNvim {
   else
     case $1 in
 	c)
-	    nvim $DOTFILES/nvim
+	    nvim $HOME/.config/nvim
 	    ;;
 	z)
-	    nvim $DOTFILES/.zshrc
+	    nvim $HOME/.zshrc
 	    ;;
-	wmd)
+	de)
 	    nvim $DOTFILES/.bspwm
 	    ;;
 	bsp)
-	    nvim $DOTFILES/.bspwm/bspwm/bspwmrc
+	    nvim $HOME/.config/bspwm/bspwmrc
 	    ;;
 	sxh)
-	    nvim $DOTFILES/.bspwm/sxhkd/sxhkdrc
+	    nvim $HOME/.config/sxhkd/sxhkdrc
 	    ;;
 	*)
 	    nvim $1

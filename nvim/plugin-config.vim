@@ -1,6 +1,24 @@
 " Auto-pairs
 let g:AutoPairsFlyMode = 0
 
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" Indent guides
+let g:indent_guides_enable_on_vim_startup = 1
+"let g:indentLine_char = 'c'
+"let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+" Barra buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" RainbowParentheses
+let g:rainbow_active = 1
+
 " nerdtree
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
@@ -11,8 +29,8 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
 let NERDTreeNaturalSort=1
 
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+"let g:NERDTreeDirArrowExpandable = ''
+"let g:NERDTreeDirArrowCollapsible = ''
 
 " tmux
 let g:tmux_navigator_no_mappings = 1
@@ -44,10 +62,10 @@ set updatetime=300
 "set shortmess+=c
 
 " always show signcolumns
-"set signcolumn=yes
+set signcolumn=yes
 
 " fugitive always vertical diffing
 "set diffopt+=vertical
 
-let $FZF_DEFAULT_OPTS='--layout=reverse'
+"let $FZF_DEFAULT_OPTS='--layout=reverse'
 
