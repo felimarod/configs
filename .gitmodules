@@ -13,3 +13,6 @@
 [submodule ".otras-configuraciones/astro"]
 	path = .otras-configuraciones/astro
 	url = https://github.com/JAlejandroMarin/neovim-config
+[submodule ".otras-configuraciones/ThePrimeagen"]
+	path = .otras-configuraciones/ThePrimeagen
+	url = https://github.com/ThePrimeagen/.dotfiles
