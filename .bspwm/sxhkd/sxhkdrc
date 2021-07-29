@@ -4,14 +4,19 @@
 #XF86Audio{Lower,Raise}Volume
 	#mpc -q {prev,next}
 #apps
-super + shift +{f}
-	exec {firefox}
+super + shift + e
+	exec nautilus
+
+#web y paginas
+super + shift +{n, f, w, m, y}
+	exec {firefox, firefox https://fb.me, firefox https://web.whatsapp.com, firefox https://music.youtube.com, firefox https://www.youtube.com}
 
 super + shift + g
   google-chrome
 
-super + shift + w
-	firejail firefox https://web.whatsapp.com
+#super + shift + w
+	#firefox https://web.whatsapp.com
+
 # terminal 
 super + Return
 	gnome-terminal

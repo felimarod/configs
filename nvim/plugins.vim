@@ -5,6 +5,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 
 call plug#begin('~/.config/vimplugs')
+Plug 'reconquest/vim-pythonx'
 
 " Language
 Plug 'scrooloose/nerdcommenter'
@@ -14,6 +15,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " HTML
 "Plug 'alvan/vim-closetag'
 "Plug 'mattn/emmet-vim'
+Plug 'reconquest/vim-pythonx'
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'

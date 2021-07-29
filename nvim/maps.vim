@@ -8,8 +8,12 @@ inoremap <silent>ii <Esc>
 nmap <Leader>s <Plug>(easymotion-s2)
 " Problems with tmux plug, put: 
 " let g:tmux_navigaro_no_mappings = 1
-nnoremap <c-j> 10<c-e>
-nnoremap <c-k> 10<c-y>
+
+" Reemplazado por control + u(UP)
+" Reemplazado por control + d(DOWN)
+"
+"nnoremap <c-j> 10<c-e>
+"nnoremap <c-k> 10<c-y>
 
 " execute code
 nmap <Leader>rj :!javac  *.java ; java Launcher<CR>

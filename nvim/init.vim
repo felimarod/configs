@@ -18,7 +18,7 @@ highlight ColoColumn ctermbg=0 guibg=lightgrey
 
 " Numbers
 set number
-set relativenumber
+"set relativenumber
 set numberwidth=1
 
 set showcmd " Show commands

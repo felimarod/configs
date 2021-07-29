@@ -3,7 +3,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export vc="$HOME/.config/nvim"
 export DOTFILES="$HOME/.dotfiles"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -96,6 +95,9 @@ function openConfig {
 	nvim $DOTFILES
     else
 	case $1 in
+	    dot)
+		nvim $DOTFILES
+		;;
 	    v)
 		nvim $HOME/.config/nvim
 		;;
@@ -134,6 +136,13 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
+function tree {
+    if [ $# -eq 0 ]; then
+	ls --tree
+    else
+	ls --tree $1
+    fi
+}
 alias cat='bat'
 
 alias v=openNvim
