@@ -33,7 +33,7 @@ let NERDTreeNaturalSort=1
 "let g:NERDTreeDirArrowCollapsible = ''
 
 " tmux
-let g:tmux_navigator_no_mappings = 1
+"let g:tmux_navigator_no_mappings = 1
 
 " Comands personals
 command! -bang -nargs=? -complete=dir GFiles

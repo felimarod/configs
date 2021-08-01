@@ -118,11 +118,12 @@ function openConfig {
 		;;
 	    *)
 		echo Ingrese un argumento valido
-		echo "\t"v\) open nvim directory, you can also use vc
-		echo "\t"z\) open ZSH config file, you can also use zshc
-		echo "\t"wmd\) open bspwm directory, you can also use cwm
-		echo "\t"bsp\) open bspwm config file
-		echo "\t"sxh\) open sxhkd config file
+		echo "\t v\) open nvim directory, you can also use vc"
+		echo "\t z\) open ZSH config file, you can also use zshc"
+		echo "\t wmd\) open bspwm directory, you can also use cwm"
+		echo "\t bsp\) open bspwm config file"
+		echo "\t sxh\) open sxhkd config file"
+		echo "\t pb\) open polybar dir"
 		;;
 	esac
     fi

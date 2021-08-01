@@ -4,8 +4,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 
-call plug#begin('~/.config/vimplugs')
-Plug 'reconquest/vim-pythonx'
+call plug#begin('$HOME/.config/vimplugs')
 
 " Language
 Plug 'scrooloose/nerdcommenter'
@@ -40,7 +39,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'joshdick/onedark.vim' 
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'PhilRunninger/nerdtree-buffer-ops'
-Plug 'PhilRunninger/nerdtree-visual-selection'
+"Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'

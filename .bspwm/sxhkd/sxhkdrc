@@ -9,7 +9,7 @@ super + shift + e
 
 #web y paginas
 super + shift +{n, f, w, m, y}
-	exec {firefox, firefox https://fb.me, firefox https://web.whatsapp.com, firefox https://music.youtube.com, firefox https://www.youtube.com}
+	exec {brave-browser, brave-browser https://fb.me, brave-browser https://web.whatsapp.com, brave-browser https://music.youtube.com, brave-browser https://www.youtube.com}
 
 super + shift + g
   google-chrome

@@ -11,7 +11,6 @@ nmap <Leader>s <Plug>(easymotion-s2)
 
 " Reemplazado por control + u(UP)
 " Reemplazado por control + d(DOWN)
-"
 "nnoremap <c-j> 10<c-e>
 "nnoremap <c-k> 10<c-y>
 
@@ -36,30 +35,25 @@ map <Leader>nt :NERDTreeToggle<CR>
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
 
-" tmux navigator
-nnoremap <silent> <Leader><C-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <Leader><C-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <Leader><C-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <Leader><C-l> :TmuxNavigateRight<cr>
-
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
- 
+" diagnostics
+nmap <silent> gb :CocDiagnostics<CR>
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" diagnostics
-nmap <silent> gb :CocDiagnostics<CR>
-
-" tabs navigation
-map <Leader>h :tabprevious<cr>
-map <Leader>l :tabnext<cr>
-
 " buffers
 map <Leader>ob :Buffers<cr>
+"nmap db :bdelete<cr>
+map <Leader>d :bdelete<CR>
+"nmap <leader>
+" tabs navigation
+map <Leader>h :bprevious<cr>
+map <Leader>l :bnext<cr>
+
 
 " git
 nnoremap <Leader>G :G<cr>
