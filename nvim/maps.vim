@@ -31,7 +31,8 @@ cnoreabbrev tree NERDTreeToggle
 cnoreabbrev find NERDTreeFind
 
 " plugs
-map <Leader>nt :NERDTreeToggle<CR>
+map <Leader>nt :tree<CR>
+map <Leader>nf :find<CR>
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
 

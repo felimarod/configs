@@ -168,7 +168,7 @@ function openNvim {
 	    nvim $HOME/.config/sxhkd/sxhkdrc
 	    ;;
 	*)
-	    nvim $1
+	    nvim $@
 	    ;;
     esac
   fi
@@ -179,14 +179,8 @@ function py {
       0)
 	  python3
 	  ;;
-      1)
-	  python3 $1
-	  ;;
-      2)
-	  python3 $1 $2
-	  ;;
       *)
-	  echo 'Use the large command python3'
+	  python3 $@
 	  ;;
   esac
 }
