@@ -14,8 +14,13 @@ nmap <Leader>s <Plug>(easymotion-s2)
 "nnoremap <c-j> 10<c-e>
 "nnoremap <c-k> 10<c-y>
 
+nmap <C-H> <C-W>h
+nmap <C-J> <C-W>j
+nmap <C-K> <C-W>k
+nmap <C-L> <C-W>l
+
 " execute code
-nmap <Leader>rj :!javac  *.java ; java Launcher<CR>
+nmap <Leader>rj :!compile-java<CR>
 nmap <Leader>rp :!python3 %<CR>
 nmap <Leader>bp :!black %<CR>
 
@@ -61,7 +66,7 @@ nnoremap <Leader>G :G<cr>
 nnoremap <Leader>gp :Gpush<cr>
 nnoremap <Leader>gl :Gpull<cr>
 
-set splitright
+set splitbelow
 function! OpenTerminal()
   " move to right most buffer
   execute "normal \<C-l>"
@@ -77,7 +82,8 @@ function! OpenTerminal()
     execute "q"
   else
     " open terminal
-    execute "vsp term://zsh"
+    execute "sp term://zsh"
+    execute "resize -7"
 
     " turn off numbers
     execute "set nonu"

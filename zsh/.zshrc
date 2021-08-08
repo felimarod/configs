@@ -238,3 +238,5 @@ function CMVC () {
 	esac
     fi
 }
+
+alias cj=compile-java
