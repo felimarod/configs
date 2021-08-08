@@ -137,6 +137,7 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
+
 function tree {
     if [ $# -eq 0 ]; then
 	ls --tree
@@ -144,7 +145,10 @@ function tree {
 	ls --tree $1
     fi
 }
+
 alias cat='bat'
+
+alias py=python3 $@
 
 alias v=openNvim
 function openNvim {
@@ -174,16 +178,6 @@ function openNvim {
   fi
 }
 
-function py {
-  case $# in
-      0)
-	  python3
-	  ;;
-      *)
-	  python3 $@
-	  ;;
-  esac
-}
 # Set 'man' colors
 function man() {
     env \
@@ -208,3 +202,39 @@ function man() {
   #fi
 #}
 #zle -N zle-keymap-select
+
+function delClass () {
+    rm *.class
+    cd logica
+    rm *.class
+    cd ../presentacion
+    rm *.class
+    cd ..
+}
+
+function CMVC () {
+    if [ $# -ne 2 ] || [ "$2" != "py" ] || [ "$2" != "java" ]; then
+	echo "Error, debe pasar dos argumentos\n\t1) Nombre del proyecto\n\t2) Lenguaje en el cual se va a desarrollar\n\t\tjava) para Java \n\t\tpy) para Python"
+    else
+	mkdir $1
+	mkdir $1/logica
+	mkdir $1/presentacion
+	mkdir $1/persistencia
+	case $2 in
+	    java)
+		touch $1/Launcher.java 
+		touch $1/logica/Sistema.java
+		touch $1/presentacion/Modelo.java
+		touch $1/presentacion/Vista.java
+		touch $1/presentacion/Controlador.java
+		;;
+	    python)
+		touch $1/Launcher.py
+		touch $1/logica/Sistema.py
+		touch $1/presentacion/Modelo.py
+		touch $1/presentacion/Vista.py
+		touch $1/presentacion/Controlador.py
+		;;
+	esac
+    fi
+}

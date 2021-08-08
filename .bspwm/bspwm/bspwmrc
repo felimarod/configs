@@ -3,8 +3,8 @@
 wmname LG3D &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor eDP -d I II III IV V VI  
-bspc monitor HDMI-A-0 -d VII VIII IX X
+bspc monitor eDP -d I II III IV V  
+bspc monitor HDMI-A-0 -d VI VII VIII IX X
 
 #bspc config border_width         2
 bspc config window_gap          12
@@ -16,9 +16,9 @@ bspc config gapless_monocle      true
 bspc config focus_follows_pointer true
 
 bspc rule -a "Gnome-terminal" desktop=^'1' follow=on
-bspc rule -a "Firefox" desktop=^'2' follow=on
-bspc rule -a "Brave-browser" desktop=^'2' follow=on
-bspc rule -a "Google-chrome" desktop=^'3' follow=on
+bspc rule -a "Firefox" desktop=^'6' follow=on
+bspc rule -a "Brave-browser" desktop=^'6' follow=on
+bspc rule -a "Google-chrome" desktop=^'7' follow=on
 bspc rule -a "albert" follow=on focus=on
 
 ##  Examples

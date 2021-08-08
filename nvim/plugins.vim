@@ -26,10 +26,13 @@ Plug 'jiangmiao/auto-pairs'
 " Integrations
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'christoomey/vim-tmux-navigator'
+"Plug 'christoomey/vim-tmux-navigator'
 "Plug 'benmills/vimux'  
 "Plug 'editorconfig/editorconfig-vim'
+"Debugger
+Plug 'vim-vdebug/vdebug'
 "Plug 'joonty/vdebug'
+"Plug 'puremourning/vimspector'
 " git
 "Plug 'tpope/vim-fugitive'
 " test
